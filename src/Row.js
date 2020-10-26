@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'; 
 import axios from './axios';
+import "./Row.css";
 
 const baseImgUrl = 'https://image.tmdb.org/t/p/original/';
 
@@ -15,8 +16,6 @@ function Row({title, fetchUrl}) {
         fetchData();
     }, [fetchUrl]);
 
-    console.table(movies);
-
     return (
         <div className='row'> 
            <h2>{title}</h2>
@@ -27,7 +26,7 @@ function Row({title, fetchUrl}) {
                })}
            </div> 
         </div>
-    )
+    ) 
 }
 
 export default Row
