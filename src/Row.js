@@ -22,7 +22,7 @@ function Row({title, fetchUrl}) {
 
            <div className='row_posters'>
                {movies.map(movie => {
-                   return <img className='row_poster' src={`${baseImgUrl}${movie.poster_path}`} alt={movie.name}/>
+                   return <img key={movie.id} className='row_poster' src={`${baseImgUrl}${movie.poster_path}`} alt={movie.name}/>
                })}
            </div> 
         </div>
